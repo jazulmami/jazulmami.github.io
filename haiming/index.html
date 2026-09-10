@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>海鸣馆-日式温泉旅馆住宿指南与汤治文化体验</title>
+<meta name="description" content="海鸣馆是日式温泉旅馆的代表性住宿形态，本文介绍海鸣馆的温泉汤治文化、客房与料理特色、入住礼仪、预约要点与常见问题，帮助你规划一次安静舒适的温泉旅馆之旅。">
+<meta name="keywords" content="海鸣馆,温泉旅馆,日式旅馆,汤治,温泉住宿,和室,怀石料理,入住礼仪">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --ink:#1f2a2e;
+    --ink-soft:#4c5c60;
+    --sea:#2f6f7a;
+    --sea-deep:#1d4a53;
+    --sand:#f4efe6;
+    --sand-deep:#e6ddcd;
+    --steam:#fbf9f5;
+    --line:#d9d0c0;
+    --accent:#a8623a;
+    --radius:14px;
+    --shadow:0 6px 24px rgba(31,42,46,.08);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Hiragino Sans GB","PingFang SC","Microsoft YaHei","Source Han Sans SC",sans-serif;
+    color:var(--ink);
+    background:var(--steam);
+    line-height:1.8;
+    font-size:16px;
+  }
+  a{color:var(--sea-deep);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  img{max-width:100%;}
+  .wrap{
+    width:100%;
+    max-width:1160px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  /* ---------- 页眉 ---------- */
+  .site-header{
+    background:linear-gradient(180deg,#fbf9f5 0%,#f4efe6 100%);
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    z-index:50;
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    padding:14px 0;
+    flex-wrap:wrap;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .brand-mark{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#5fa3ad,#1d4a53);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#f4efe6;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1px;
+    flex:0 0 auto;
+  }
+  .brand-text strong{
+    display:block;
+    font-size:20px;
+    letter-spacing:2px;
+  }
+  .brand-text span{
+    display:block;
+    font-size:12px;
+    color:var(--ink-soft);
+    letter-spacing:1px;
+  }
+  .main-nav ul{
+    list-style:none;
+    display:flex;
+    gap:6px;
+    margin:0;
+    padding:0;
+    flex-wrap:wrap;
+  }
+  .main-nav a{
+    display:block;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:15px;
+    color:var(--ink-soft);
+    transition:background .2s,color .2s;
+  }
+  .main-nav a:hover{
+    background:#e9e2d5;
+    color:var(--sea-deep);
+    text-decoration:none;
+  }
+
+  /* ---------- 首屏 ---------- */
+  .hero{
+    background:
+      radial-gradient(circle at 82% 18%,rgba(95,163,173,.28),transparent 55%),
+      radial-gradient(circle at 12% 78%,rgba(168,98,58,.16),transparent 60%),
+      linear-gradient(160deg,#1d4a53 0%,#2f6f7a 55%,#3d8792 100%);
+    color:#f4efe6;
+    padding:64px 0 72px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    right:-80px;
+    bottom:-120px;
+    width:340px;
+    height:340px;
+    border-radius:50%;
+    border:1px solid rgba(244,239,230,.25);
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    right:40px;
+    bottom:-60px;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    border:1px solid rgba(244,239,230,.18);
+  }
+  .hero-inner{
+    position:relative;
+    z-index:2;
+    max-width:760px;
+  }
+  .hero-tag{
+    display:inline-block;
+    font-size:13px;
+    letter-spacing:3px;
+    padding:5px 14px;
+    border:1px solid rgba(244,239,230,.5);
+    border-radius:999px;
+    margin-bottom:22px;
+  }
+  .hero h1{
+    font-size:clamp(26px,4.2vw,40px);
+    line-height:1.4;
+    margin:0 0 18px;
+    letter-spacing:2px;
+    font-weight:700;
+  }
+  .hero p{
+    font-size:16px;
+    color:#e4ecec;
+    margin:0 0 28px;
+  }
+  .hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding:12px 26px;
+    border-radius:999px;
+    font-size:15px;
+    letter-spacing:1px;
+    transition:transform .2s,background .2s,color .2s;
+    border:1px solid transparent;
+    cursor:pointer;
+  }
+  .btn-primary{
+    background:#f4efe6;
+    color:var(--sea-deep);
+    font-weight:600;
+  }
+  .btn-primary:hover{
+    background:#fff;
+    transform:translateY(-2px);
+    text-decoration:none;
+  }
+  .btn-ghost{
+    border-color:rgba(244,239,230,.6);
+    color:#f4efe6;
+  }
+  .btn-ghost:hover{
+    background:rgba(244,239,230,.14);
+    transform:translateY(-2px);
+    text-decoration:none;
+  }
+  .hero-facts{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:16px;
+    margin-top:44px;
+    position:relative;
+    z-index:2;
+  }
+  .fact{
+    background:rgba(244,239,230,.1);
+    border:1px solid rgba(244,239,230,.22);
+    border-radius:var(--radius);
+    padding:16px 18px;
+  }
+  .fact strong{
+    display:block;
+    font-size:20px;
+    letter-spacing:1px;
+    margin-bottom:4px;
+  }
+  .fact span{
+    font-size:13px;
+    color:#d3e0e0;
+  }
+
+  /* ---------- 通用区块 ---------- */
+  section{
+    padding:64px 0;
+  }
+  .section-head{
+    max-width:720px;
+    margin-bottom:36px;
+  }
+  .section-head .kicker{
+    font-size:13px;
+    letter-spacing:3px;
+    color:var(--accent);
+    display:block;
+    margin-bottom:10px;
+  }
+  .section-head h2{
+    font-size:clamp(22px,3vw,30px);
+    margin:0 0 14px;
+    letter-spacing:1px;
+    position:relative;
+    padding-bottom:14px;
+  }
+  .section-head h2::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:52px;
+    height:3px;
+    background:var(--sea);
+    border-radius:2px;
+  }
+  .section-head p{
+    margin:0;
+    color:var(--ink-soft);
+    font-size:15.5px;
+  }
+  .bg-sand{background:var(--sand);}
+  .bg-white{background:#fff;}
+
+  /* ---------- 特色卡片 ---------- */
+  .feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(258px,1fr));
+    gap:22px;
+  }
+  .feature-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px 24px;
+    box-shadow:var(--shadow);
+    transition:transform .25s,border-color .25s;
+  }
+  .feature-card:hover{
+    transform:translateY(-4px);
+    border-color:#bcd3d6;
+  }
+  .feature-icon{
+    width:46px;
+    height:46px;
+    border-radius:12px;
+    background:#e7f0f1;
+    color:var(--sea-deep);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:16px;
+  }
+  .feature-card h3{
+    font-size:18px;
+    margin:0 0 10px;
+    letter-spacing:.5px;
+  }
+  .feature-card p{
+    margin:0;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- 汤治文化 ---------- */
+  .culture-layout{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:40px;
+    align-items:start;
+  }
+  .culture-text h3{
+    font-size:19px;
+    margin:26px 0 10px;
+    letter-spacing:.5px;
+  }
+  .culture-text h3:first-child{margin-top:0;}
+  .culture-text p{
+    margin:0 0 14px;
+    color:var(--ink-soft);
+    font-size:15.5px;
+  }
+  .culture-text ul{
+    margin:0 0 14px;
+    padding-left:20px;
+    color:var(--ink-soft);
+    font-size:15.5px;
+  }
+  .culture-text li{margin-bottom:8px;}
+  .aside-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:24px;
+    box-shadow:var(--shadow);
+  }
+  .aside-card h3{
+    font-size:17px;
+    margin:0 0 16px;
+    padding-bottom:12px;
+    border-bottom:1px dashed var(--line);
+    letter-spacing:.5px;
+  }
+  .aside-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    font-size:14.5px;
+  }
+  .aside-list li{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    padding:9px 0;
+    border-bottom:1px solid #f0ebe1;
+    color:var(--ink-soft);
+  }
+  .aside-list li:last-child{border-bottom:none;}
+  .aside-list strong{color:var(--ink);font-weight:600;}
+
+  /* ---------- 房间与料理 ---------- */
+  .room-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:22px;
+  }
+  .room-card{
+    background:#fff;
+    border-radius:var(--radius);
+    overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+    display:flex;
+    flex-direction:column;
+  }
+  .room-visual{
+    height:132px;
+    background:linear-gradient(135deg,#2f6f7a,#5fa3ad);
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    padding:14px 18px;
+    color:#f4efe6;
+    font-size:13px;
+    letter-spacing:2px;
+  }
+  .room-visual.warm{background:linear-gradient(135deg,#8a5a34,#c08a5a);}
+  .room-visual.moss{background:linear-gradient(135deg,#3f5c46,#7d9c7f);}
+  .room-body{
+    padding:22px 22px 24px;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+  }
+  .room-body h3{
+    margin:0 0 10px;
+    font-size:18px;
+  }
+  .room-body p{
+    margin:0 0 16px;
+    font-size:14.5px;
+    color:var(--ink-soft);
+    flex:1;
+  }
+  .tag-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .tag{
+    font-size:12.5px;
+    padding:4px 11px;
+    border-radius:999px;
+    background:#eef4f5;
+    color:var(--sea-deep);
+  }
+  .tag.warm{background:#f7ece2;color:#8a5a34;}
+
+  /* ---------- 礼仪步骤 ---------- */
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+    counter-reset:step;
+  }
+  .step{
+    background:#fff;
+    border-radius:var(--radius);
+    padding:24px 22px;
+    border:1px solid var(--line);
+    position:relative;
+  }
+  .step::before{
+    counter-increment:step;
+    content:counter(step,decimal-leading-zero);
+    font-size:26px;
+    font-weight:700;
+    color:#cfe0e2;
+    display:block;
+    margin-bottom:10px;
+    letter-spacing:1px;
+  }
+  .step h3{
+    font-size:16.5px;
+    margin:0 0 8px;
+  }
+  .step p{
+    margin:0;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- 预约建议 ---------- */
+  .tips-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:36px;
+    align-items:start;
+  }
+  .tips-block h3{
+    font-size:18px;
+    margin:0 0 14px;
+    letter-spacing:.5px;
+  }
+  .tips-block ol,.tips-block ul{
+    margin:0;
+    padding-left:20px;
+    color:var(--ink-soft);
+    font-size:15px;
+  }
+  .tips-block li{margin-bottom:10px;}
+  .notice{
+    margin-top:22px;
+    background:#fdf6ee;
+    border-left:4px solid var(--accent);
+    border-radius:0 var(--radius) var(--radius) 0;
+    padding:16px 20px;
+    font-size:14.5px;
+    color:#6b4a30;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-list{
+    display:grid;
+    gap:14px;
+    max-width:880px;
+  }
+  .faq-item{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:0 22px;
+    box-shadow:var(--shadow);
+  }
+  .faq-item summary{
+    cursor:pointer;
+    list-style:none;
+    padding:18px 0;
+    font-size:16.5px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    letter-spacing:.3px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::before{
+    content:"問";
+    flex:0 0 auto;
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:#e7f0f1;
+    color:var(--sea-deep);
+    font-size:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
+  }
+  .faq-item[open] summary::before{
+    content:"答";
+    background:#f7ece2;
+    color:var(--accent);
+  }
+  .faq-item p{
+    margin:0 0 20px 38px;
+    font-size:14.8px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- 页脚 ---------- */
+  .site-footer{
+    background:#1d4a53;
+    color:#c9d9da;
+    padding:52px 0 26px;
+    font-size:14.5px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:32px;
+    margin-bottom:36px;
+  }
+  .footer-grid h3{
+    color:#f4efe6;
+    font-size:15.5px;
+    margin:0 0 14px;
+    letter-spacing:1px;
+  }
+  .footer-grid p{
+    margin:0 0 12px;
+    color:#a9c1c3;
+    font-size:14px;
+  }
+  .footer-grid ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .footer-grid li{margin-bottom:9px;}
+  .footer-grid a{color:#c9d9da;}
+  .footer-grid a:hover{color:#fff;}
+  .footer-bottom{
+    border-top:1px solid rgba(201,217,218,.22);
+    padding-top:20px;
+    display:flex;
+    justify-content:space-between;
+    gap:14px;
+    flex-wrap:wrap;
+    font-size:13px;
+    color:#93b0b2;
+  }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width:900px){
+    .culture-layout,.tips-layout{
+      grid-template-columns:1fr;
+      gap:28px;
+    }
+    .footer-grid{
+      grid-template-columns:1fr 1fr;
+      gap:26px;
+    }
+  }
+  @media (max-width:640px){
+    body{font-size:15.5px;}
+    .header-inner{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:12px;
+    }
+    .main-nav ul{gap:2px;}
+    .main-nav a{padding:6px 10px;font-size:14px;}
+    .hero{padding:48px 0 54px;}
+    section{padding:48px 0;}
+    .hero-facts{margin-top:32px;}
+    .footer-grid{grid-template-columns:1fr;}
+    .faq-item p{margin-left:0;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <div class="brand-mark">海</div>
+      <div class="brand-text">
+        <strong>海鸣馆</strong>
+        <span>温泉旅馆 · 汤治文化</span>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a href="#about">旅馆概览</a></li>
+        <li><a href="#culture">汤治文化</a></li>
+        <li><a href="#rooms">客房与料理</a></li>
+        <li><a href="#etiquette">入住礼仪</a></li>
+        <li><a href="#booking">预约建议</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero" id="about">
+    <div class="wrap">
+      <div class="hero-inner">
+        <span class="hero-tag">SEA · SOUND · STAY</span>
+        <h1>海鸣馆：在海潮声里住下来的日式温泉旅馆</h1>
+        <p>“海鸣馆”通常指临近海岸、以温泉汤治与安静住宿为核心的日式旅馆。它不追求大堂的华丽，而是把重心放在汤池、和室、时令料理与一夜好眠上。如果你正在查找海鸣馆是什么、值不值得住、怎么订、要注意哪些礼仪，这一页会按顺序讲清楚。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#culture">了解汤治文化</a>
+          <a class="btn btn-ghost" href="#booking">预约与入住要点</a>
+        </div>
+      </div>
+      <div class="hero-facts">
+        <div class="fact">
+          <strong>温泉汤治</strong>
+          <span>以多次入浴、规律作息为核心的疗养式住宿</span>
+        </div>
+        <div class="fact">
+          <strong>和室空间</strong>
+          <span>榻榻米、障子、布团，起居与睡眠同一空间</span>
+        </div>
+        <div class="fact">
+          <strong>一泊二食</strong>
+          <span>晚餐与早餐通常包含在房价内，按时段用餐</span>
+        </div>
+        <div class="fact">
+          <strong>静音优先</strong>
+          <span>走廊、汤池、餐厅普遍保持低声交谈</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 旅馆概览 -->
+  <section class="bg-white">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">OVERVIEW</span>
+        <h2>海鸣馆是一种什么样的住宿</h2>
+        <p>把“海鸣馆”当成一个类型来理解，比当成单一设施更准确。它代表的是一类靠近海边的温泉旅馆：建筑多依地形而建，客房面向海面或庭院，公共区域设有大浴场，服务节奏偏慢。</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">湯</div>
+          <h3>以汤池为中心</h3>
+          <p>大浴场与露天风吕是旅馆的核心设施，入住后的时间安排往往围绕入浴时段展开，而不是围绕观光行程。</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">和</div>
+          <h3>和室起居方式</h3>
+          <p>白天是坐席与茶几，晚间由工作人员铺设布团。空间紧凑但秩序清晰，适合习惯安静环境的人。</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">旬</div>
+          <h3>时令料理为主</h3>
+          <p>餐食多采用当地海产与当季蔬菜，以会席或怀石形式上桌，讲究出菜顺序与器皿搭配。</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">音</div>
+          <h3>海鸣与静音</h3>
+          <p>名字里的“海鸣”指向海浪声。临海客房能听到潮声，但旅馆内部通常要求降低音量，避免互相干扰。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 汤治文化 -->
+  <section class="bg-sand" id="culture">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">CULTURE</span>
+        <h2>汤治文化：为什么要在温泉旅馆多住几天</h2>
+        <p>汤治是日本温泉文化中的一个传统概念，指通过一段时间的规律入浴、清淡饮食与早睡早起，让身体从疲劳中恢复。海鸣馆这类旅馆的运营方式，正是围绕这一节奏设计的。</p>
+      </div>
+      <div class="culture-layout">
+        <div class="culture-text">
+          <h3>汤治的基本节奏</h3>
+          <p>传统汤治讲究“一日三浴”，即早、午、晚各入浴一次，每次时间不宜过长。现代旅馆通常建议根据自身体感调整，不必强求次数，重点是保持规律而不过度。</p>
+          <ul>
+            <li>入浴前先以温水冲淋身体，让体温逐步适应。</li>
+            <li>单次浸泡建议控制在十分钟上下，起身后补充水分。</li>
+            <li>饭后与饮酒后不宜立即入浴，中间留出休息时间。</li>
+            <li>泡汤后不必再次冲淋，让温泉成分留在皮肤表面。</li>
+          </ul>
+          <h3>为什么强调“住下来”</h3>
+          <p>当天往返的泡汤只能算体验，而汤治需要连续的作息。住两晚以上，身体才有机会从赶路状态切换到放松状态。这也是海鸣馆这类旅馆普遍鼓励连住的原因。</p>
+          <h3>饮食与汤治的配合</h3>
+          <p>会席料理分量看似不多，但出菜节奏慢、油脂控制得当，配合入浴更容易被身体接受。若对某些食材不适应，建议在预约时提前说明。</p>
+        </div>
+        <aside class="aside-card">
+          <h3>入住前可先确认的事项</h3>
+          <ul class="aside-list">
+            <li><span>温泉泉质</span><strong>询问旅馆说明</strong></li>
+            <li><span>是否含餐</span><strong>一泊二食为主</strong></li>
+            <li><span>房型形式</span><strong>和室 / 和洋室</strong></li>
+            <li><span>浴场时段</span><strong>分时段或通宵</strong></li>
+            <li><span>接送安排</span><strong>需提前沟通</strong></li>
+            <li><span>儿童政策</span><strong>各馆规定不同</strong></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 客房与料理 -->
+  <section class="bg-white" id="rooms">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">ROOMS &amp; CUISINE</span>
+        <h2>客房形式与料理安排</h2>
+        <p>不同旅馆的房型命名各不相同，但大致可以归为几类。选择时优先考虑睡眠习惯、同行人数和是否需要私密汤池，而不是只看面积数字。</p>
+      </div>
+      <div class="room-grid">
+        <article class="room-card">
+          <div class="room-visual">和室 · 榻榻米</div>
+          <div class="room-body">
+            <h3>标准和室</h3>
+            <p>最常见的基础房型，日间为坐席空间，夜间铺设布团。适合两人以内、能接受低矮坐姿与地铺睡眠的旅客。</p>
+            <div class="tag-row">
+              <span class="tag">布团睡眠</span>
+              <span class="tag">空间灵活</span>
+              <span class="tag">价格相对平实</span>
+            </div>
+          </div>
+        </article>
+        <article class="room-card">
+          <div class="room-visual warm">和洋室 · 双床</div>
+          <div class="room-body">
+            <h3>和洋混合房</h3>
+            <p>在榻榻米空间之外另设床铺区域，兼顾和室氛围与西式睡眠习惯。对腰背不便或带长辈出行的人更友好。</p>
+            <div class="tag-row">
+              <span class="tag warm">床铺睡眠</span>
+              <span class="tag warm">适合长辈</span>
+              <span class="tag warm">空间较宽</span>
+            </div>
+          </div>
+        </article>
+        <article class="room-card">
+          <div class="room-visual moss">露天风吕付客房</div>
+          <div class="room-body">
+            <h3>带私汤的客房</h3>
+            <p>房内或阳台设有独立汤池，可不受公共浴场时段限制。适合注重隐私、或不便使用公共浴场的旅客。</p>
+            <div class="tag-row">
+              <span class="tag">私密入浴</span>
+              <span class="tag">时段自由</span>
+              <span class="tag">数量有限</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="culture-layout" style="margin-top:44px;">
+        <div class="culture-text">
+          <h3>会席料理的出菜逻辑</h3>
+          <p>会席料理通常按先付、前菜、椀物、向付、烧物、煮物、食事、水物等顺序上桌，节奏由旅馆控制。用餐时间一般分早场与晚场，需在入住时确认。</p>
+          <p>料理内容随季节变化，同一家旅馆在不同月份提供的菜品可能完全不同。这也是温泉旅馆常被回头客选择的原因之一。</p>
+          <h3>饮食限制的处理方式</h3>
+          <p>过敏、素食、宗教饮食等需求，通常需要在预约时提出，临时告知可能难以调整。部分旅馆对严格素食的支持有限，建议提前确认可提供的范围。</p>
+        </div>
+        <aside class="aside-card">
+          <h3>用餐相关提醒</h3>
+          <ul class="aside-list">
+            <li><span>用餐时段</span><strong>入住时确认</strong></li>
+            <li><span>用餐地点</span><strong>客房或食事处</strong></li>
+            <li><span>酒水</span><strong>多需另行点单</strong></li>
+            <li><span>儿童餐</span><strong>需提前说明</strong></li>
+            <li><span>迟到</span><strong>可能影响出菜</strong></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 入住礼仪 -->
+  <section class="bg-sand" id="etiquette">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">ETIQUETTE</span>
+        <h2>入住海鸣馆这类旅馆的基本礼仪</h2>
+        <p>温泉旅馆的礼仪并不复杂，核心只有一条：不打扰他人。以下顺序按入住流程排列，第一次入住的人可以照着做。</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <h3>玄关脱鞋</h3>
+          <p>进入旅馆玄关通常需要脱鞋，鞋头朝外摆放。室内穿袜或赤足，部分旅馆会提供馆内拖鞋。</p>
+        </article>
+        <article class="step">
+          <h3>办理入住</h3>
+          <p>在大堂或前台确认姓名与用餐时段，工作人员会说明浴场位置、开放时间与馆内规则。</p>
+        </article>
+        <article class="step">
+          <h3>更衣与入浴</h3>
+          <p>浴场更衣处脱衣放入篮中，携带小毛巾进入。毛巾不要浸入汤池，长发需束起。</p>
+        </article>
+        <article class="step">
+          <h3>汤池使用</h3>
+          <p>先冲淋再入池，不在池中搓洗或游泳。多人使用时保持距离，离池前简单冲去汗液。</p>
+        </article>
+        <article class="step">
+          <h3>用餐与就寝</h3>
+          <p>按约定时间到达用餐处，穿着馆内提供的浴衣即可。夜间走廊保持低声，避免影响他人休息。</p>
+        </article>
+        <article class="step">
+          <h3>退房</h3>
+          <p>确认随身物品，将钥匙或房卡交还前台。如需寄存行李或安排接送，可提前告知。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 预约建议 -->
+  <section class="bg-white" id="booking">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">BOOKING</span>
+        <h2>预约与选择旅馆的实用建议</h2>
+        <p>温泉旅馆的房间数量通常不多，热门时段容易满房。提前规划不仅能选到合适房型，也更容易沟通特殊需求。</p>
+      </div>
+      <div class="tips-layout">
+        <div class="tips-block">
+          <h3>预约前先想清楚三件事</h3>
+          <ol>
+            <li><strong>同行人构成：</strong>是否有长辈、儿童或行动不便者，直接决定房型与楼层选择。</li>
+            <li><strong>用餐需求：</strong>过敏、素食、忌口等需在预约阶段说明，越早越好。</li>
+            <li><strong>交通方式：</strong>确认是否有接送服务、末班车时间，以及是否需要自驾停车位。</li>
+          </ol>
+          <h3>选择旅馆时的观察点</h3>
+          <ul>
+            <li>浴场是分时段还是通宵开放，是否提供露天风吕。</li>
+            <li>客房是否临海或临庭院，隔音与朝向如何。</li>
+            <li>餐食是客房内用餐还是公共食事处。</li>
+            <li>是否接受单人入住，部分旅馆对单人客有额外规定。</li>
+          </ul>
+          <div class="notice">
+            提示：温泉旅馆的房价通常已包含晚餐与早餐，退房时可能另计酒水、入浴税等项目。具体费用构成以旅馆实际说明为准，建议入住前确认清楚。
+          </div>
+        </div>
+        <div class="tips-block">
+          <h3>入住当天的准备清单</h3>
+          <ul>
+            <li>舒适的室内袜或易穿脱的鞋子。</li>
+            <li>个人洗漱用品，部分旅馆仅提供基础备品。</li>
+            <li>常用药品与保湿用品，泡汤后皮肤容易干燥。</li>
+            <li>少量现金，用于购买饮品或当地特产。</li>
+            <li>提前下载好离线地图，海边旅馆位置可能较偏。</li>
+          </ul>
+          <h3>关于泡汤的身体提醒</h3>
+          <p>入浴会加快血液循环，饮酒后、空腹或刚吃饱时都不适合立即泡汤。有心血管相关情况的人，建议先咨询医生，并控制单次浸泡时间。</p>
+          <p>露天风吕在冬季温差较大，起身时动作放慢，避免突然站立引起不适。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-sand" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">FAQ</span>
+        <h2>关于海鸣馆的常见问题</h2>
+        <p>以下问题来自首次接触温泉旅馆的旅客最常提出的疑问，答案以通行做法为准，具体规定请以实际旅馆说明为准。</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>海鸣馆是具体某一家旅馆的名字吗？</summary>
+          <p>“海鸣馆”在不同地区可能对应不同的实际设施，也常被用作临海温泉旅馆的通用命名。查找时建议结合所在地、泉质、房型与评价综合判断，而不是只凭名称。</p>
+        </details>
+        <details class="faq-item">
+          <summary>第一次住温泉旅馆，需要注意什么？</summary>
+          <p>主要是三点：按约定时间用餐、入浴前先冲淋、在公共区域保持安静。其他细节旅馆工作人员都会主动说明，不必过度紧张。</p>
+        </details>
+        <details class="faq-item">
+          <summary>有纹身可以进入大浴场吗？</summary>
+          <p>各旅馆规定不同。部分旅馆提供遮盖贴布，部分设有私汤或可预约的包场浴池。建议在预约时直接询问，避免到店后无法入浴。</p>
+        </details>
+        <details class="faq-item">
+          <summary>可以只泡汤不住宿吗？</summary>
+          <p>部分温泉旅馆提供日归入浴服务，但通常有固定时段，且可能因客满而暂停。若以泡汤为主，建议提前电话或通过旅馆渠道确认当天是否开放。</p>
+        </details>
+        <details class="faq-item">
+          <summary>带小孩入住合适吗？</summary>
+          <p>取决于旅馆政策。有些旅馆欢迎家庭入住并提供儿童餐与备品，有些则以安静环境为主、限制低龄儿童。预约前确认儿童收费标准与用餐安排即可。</p>
+        </details>
+        <details class="faq-item">
+          <summary>需要给小费吗？</summary>
+          <p>日本的温泉旅馆一般不流行小费文化，服务费通常已包含在账单中。若对服务特别满意，口头致谢或写一张感谢卡更为常见。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>海鸣馆</h3>
+        <p>围绕日式温泉旅馆与汤治文化的住宿指南，帮助旅客理解入住方式、礼仪与预约要点。</p>
+        <p>内容以通行做法为基础，具体规定请以实际旅馆说明为准。</p>
+      </div>
+      <div>
+        <h3>页面导航</h3>
+        <ul>
+          <li><a href="#about">旅馆概览</a></li>
+          <li><a href="#culture">汤治文化</a></li>
+          <li><a href="#rooms">客房与料理</a></li>
+          <li><a href="#etiquette">入住礼仪</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>实用信息</h3>
+        <ul>
+          <li><a href="#booking">预约建议</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#rooms">房型选择</a></li>
+          <li><a href="#culture">入浴节奏</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>阅读提醒</h3>
+        <ul>
+          <li>泉质与设施以旅馆公告为准</li>
+          <li>费用构成请入住前确认</li>
+          <li>身体不适时避免长时间泡汤</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>海鸣馆 · 温泉旅馆住宿指南</span>
+      <span>本页内容仅供出行参考</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 平滑滚动到锚点，兼顾不支持 scroll-behavior 的浏览器
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = this.getAttribute('href');
+      if(id.length < 2) return;
+      var target = document.querySelector(id);
+      if(!target) return;
+      e.preventDefault();
+      var header = document.querySelector('.site-header');
+      var offset = header ? header.offsetHeight + 10 : 0;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+
+  // 仅允许一个 FAQ 展开，保持页面整洁
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function(item){
+    item.addEventListener('toggle', function(){
+      if(this.open){
+        faqItems.forEach(function(other){
+          if(other !== item) other.open = false;
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+  </html>
