@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>冒险岛龙的传人技能-职业技能加点、转职路线与实战解析</title>
+<meta name="description" content="冒险岛龙的传人技能全解析：梳理龙的传人各阶段职业技能、加点思路、转职路线、核心输出循环与常见疑问，帮助玩家快速了解这一职业的技能体系与培养方向。">
+<meta name="keywords" content="冒险岛龙的传人技能,龙的传人,冒险岛职业技能,龙的传人加点,龙的传人转职">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#1c2233;
+  --ink-soft:#4a5468;
+  --line:#e3e7f0;
+  --paper:#ffffff;
+  --bg:#f4f6fb;
+  --brand:#2f6df6;
+  --brand-deep:#1b3fa0;
+  --gold:#f0a92c;
+  --dragon:#7a4bd6;
+  --dragon-soft:#efe9ff;
+  --radius:14px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  font-size:16px;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ---------- 顶部 ---------- */
+.topbar{
+  background:linear-gradient(120deg,#1b3fa0 0%,#2f6df6 45%,#7a4bd6 100%);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+.topbar::after{
+  content:"";
+  position:absolute;
+  right:-120px;top:-120px;
+  width:420px;height:420px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.22),transparent 68%);
+}
+.site-head{position:relative;z-index:2}
+.head-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;padding:16px 0;flex-wrap:wrap;
+}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{
+  width:46px;height:46px;border-radius:12px;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.35);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;font-weight:700;letter-spacing:-1px;
+  color:#ffe9a8;
+}
+.logo-text b{display:block;font-size:19px;letter-spacing:.5px}
+.logo-text span{display:block;font-size:12px;opacity:.82;letter-spacing:1px}
+.site-nav{display:flex;gap:6px;flex-wrap:wrap}
+.site-nav a{
+  font-size:14px;padding:8px 14px;border-radius:999px;
+  color:rgba(255,255,255,.9);
+  transition:.2s;
+}
+.site-nav a:hover{background:rgba(255,255,255,.18);color:#fff}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;z-index:2;padding:26px 0 46px}
+.hero-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:34px;align-items:start}
+.hero h1{
+  font-size:34px;line-height:1.35;letter-spacing:.5px;
+  margin-bottom:16px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:#ffe9a8;
+  border-bottom:3px solid rgba(255,233,168,.55);
+  padding-bottom:2px;
+}
+.hero p.lead{
+  font-size:15.5px;color:rgba(255,255,255,.9);
+  max-width:640px;margin-bottom:22px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:999px;
+  font-size:14.5px;font-weight:600;transition:.22s;
+  border:1px solid transparent;
+}
+.btn-solid{background:#fff;color:var(--brand-deep)}
+.btn-solid:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.16)}
+.hero-tags{display:flex;gap:10px;flex-wrap:wrap}
+.tag{
+  font-size:12.5px;padding:6px 13px;border-radius:8px;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.24);
+  color:rgba(255,255,255,.94);
+}
+.hero-card{
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:var(--radius);
+  padding:22px;
+  backdrop-filter:blur(4px);
+}
+.hero-card h2{
+  font-size:16px;margin-bottom:14px;color:#ffe9a8;
+  letter-spacing:.5px;
+}
+.hero-card ul{list-style:none;display:grid;gap:11px}
+.hero-card li{
+  font-size:14px;color:rgba(255,255,255,.92);
+  padding-left:20px;position:relative;
+}
+.hero-card li::before{
+  content:"◆";
+  position:absolute;left:0;top:0;
+  font-size:10px;color:#ffe9a8;line-height:1.9;
+}
+
+/* ---------- 通用区块 ---------- */
+main{background:var(--bg)}
+.section{padding:56px 0}
+.section.alt{background:#fff}
+.section-head{margin-bottom:30px}
+.section-head .kicker{
+  display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:2px;
+  color:var(--brand);background:#e8effe;
+  padding:5px 12px;border-radius:6px;margin-bottom:12px;
+}
+.section-head h2{font-size:25px;letter-spacing:.4px;margin-bottom:10px}
+.section-head p{color:var(--ink-soft);font-size:15px;max-width:760px}
+
+/* ---------- 技能阶段 ---------- */
+.stage-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:20px}
+.stage-card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;position:relative;transition:.24s;
+}
+.stage-card:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(31,63,160,.1);border-color:#c9d8fb}
+.stage-card .lv{
+  display:inline-block;font-size:12px;font-weight:700;
+  color:#fff;background:var(--brand);
+  padding:4px 11px;border-radius:6px;margin-bottom:14px;letter-spacing:.5px;
+}
+.stage-card h3{font-size:17.5px;margin-bottom:10px}
+.stage-card p{font-size:14px;color:var(--ink-soft);margin-bottom:14px}
+.stage-card ul{list-style:none;display:grid;gap:8px}
+.stage-card li{
+  font-size:13.5px;color:var(--ink-soft);
+  padding-left:16px;position:relative;
+}
+.stage-card li::before{
+  content:"";position:absolute;left:0;top:9px;
+  width:6px;height:6px;border-radius:50%;background:var(--gold);
+}
+.stage-card.dragon .lv{background:var(--dragon)}
+.stage-card.dragon:hover{border-color:#d6c8f7}
+
+/* ---------- 加点表 ---------- */
+.build-table{
+  width:100%;border-collapse:collapse;background:#fff;
+  border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);font-size:14.5px;
+}
+.build-table caption{
+  caption-side:top;text-align:left;font-size:13px;
+  color:var(--ink-soft);padding:0 0 12px;
+}
+.build-table th,.build-table td{
+  padding:13px 16px;text-align:left;border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+.build-table thead th{
+  background:#eef3fe;color:var(--brand-deep);
+  font-size:13.5px;letter-spacing:.4px;white-space:nowrap;
+}
+.build-table tbody tr:last-child td{border-bottom:none}
+.build-table tbody tr:hover{background:#f8faff}
+.build-table td b{color:var(--brand-deep)}
+.table-scroll{overflow-x:auto}
+
+/* ---------- 循环与实战 ---------- */
+.rotate-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.rotate-box{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;
+}
+.rotate-box h3{font-size:17px;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.rotate-box h3 span{
+  width:26px;height:26px;border-radius:8px;background:var(--dragon-soft);
+  color:var(--dragon);font-size:13px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.rotate-box ol{padding-left:20px;display:grid;gap:9px}
+.rotate-box ol li{font-size:14.5px;color:var(--ink-soft)}
+.rotate-box ol li b{color:var(--ink)}
+.note{
+  margin-top:16px;font-size:13.5px;color:#8a6a12;
+  background:#fff8e6;border-left:3px solid var(--gold);
+  padding:11px 14px;border-radius:0 8px 8px 0;
+}
+
+/* ---------- 侧栏提示 ---------- */
+.tips-band{
+  background:linear-gradient(135deg,#1b3fa0,#7a4bd6);
+  color:#fff;border-radius:var(--radius);
+  padding:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:24px;
+}
+.tips-band h3{font-size:16px;margin-bottom:9px;color:#ffe9a8}
+.tips-band p{font-size:14px;color:rgba(255,255,255,.9)}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;gap:14px;max-width:900px}
+.faq details{
+  background:#fff;border:1px solid var(--line);
+  border-radius:12px;padding:0 20px;transition:.2s;
+}
+.faq details[open]{border-color:#c9d8fb;box-shadow:0 8px 22px rgba(31,63,160,.07)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:17px 0;
+  font-size:15.5px;font-weight:600;position:relative;padding-right:34px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:0;top:15px;
+  font-size:20px;color:var(--brand);font-weight:400;
+}
+.faq details[open] summary::after{content:"–"}
+.faq .answer{
+  font-size:14.5px;color:var(--ink-soft);
+  padding:0 0 18px;border-top:1px dashed var(--line);padding-top:14px;
+}
+
+/* ---------- 相关阅读 ---------- */
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.related-card{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:20px;transition:.22s;
+}
+.related-card:hover{border-color:#c9d8fb;transform:translateY(-3px)}
+.related-card span{font-size:12px;color:var(--brand);font-weight:700;letter-spacing:1px}
+.related-card h3{font-size:15.5px;margin:9px 0 8px}
+.related-card p{font-size:13.5px;color:var(--ink-soft)}
+
+/* ---------- 页脚 ---------- */
+footer{
+  background:#141a2b;color:#a9b2c7;
+  padding:44px 0 26px;font-size:13.5px;
+}
+.foot-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;
+  gap:28px;margin-bottom:30px;
+}
+.foot-grid h4{color:#fff;font-size:14.5px;margin-bottom:13px}
+.foot-grid ul{list-style:none;display:grid;gap:9px}
+.foot-grid a:hover{color:#fff}
+.foot-brand b{color:#fff;font-size:16px;display:block;margin-bottom:10px}
+.foot-brand p{line-height:1.8}
+.foot-bottom{
+  border-top:1px solid #262f45;padding-top:18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-size:12.5px;color:#7d879e;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr}
+  .rotate-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:15px}
+  .head-inner{padding:14px 0}
+  .site-nav a{padding:7px 11px;font-size:13px}
+  .hero{padding:18px 0 34px}
+  .hero h1{font-size:25px}
+  .hero p.lead{font-size:14.5px}
+  .section{padding:40px 0}
+  .section-head h2{font-size:21px}
+  .tips-band{padding:22px}
+  .foot-grid{grid-template-columns:1fr;gap:22px}
+  .build-table th,.build-table td{padding:11px 12px;font-size:13.5px}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="site-head">
+    <div class="wrap head-inner">
+      <div class="logo">
+        <div class="logo-mark">龙</div>
+        <div class="logo-text">
+          <b>龙的传人技能站</b>
+          <span>冒险岛职业资料库</span>
+        </div>
+      </div>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#stages">技能阶段</a>
+        <a href="#build">加点方案</a>
+        <a href="#rotate">输出循环</a>
+        <a href="#tips">培养建议</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <h1>冒险岛<em>龙的传人技能</em>全解析：从转职到实战的完整思路</h1>
+        <p class="lead">
+          龙的传人是冒险岛中以拳套为武器、兼具高机动与连击节奏的近战职业分支。想搞清楚它的技能体系，关键不是死记技能名，而是理解各阶段技能的作用定位、加点优先级，以及它们如何串成一套顺畅的输出循环。本页按转职阶段逐层梳理，并给出可参考的加点方向与实战注意点。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-solid" href="#stages">查看各阶段技能</a>
+          <a class="btn btn-ghost" href="#build">参考加点方案</a>
+        </div>
+        <div class="hero-tags">
+          <span class="tag">转职阶段梳理</span>
+          <span class="tag">加点优先级</span>
+          <span class="tag">核心输出技能</span>
+          <span class="tag">机动与生存</span>
+          <span class="tag">新手常见误区</span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h2>先看结论</h2>
+        <ul>
+          <li>前期优先点满主攻技能与位移技能，保证刷图效率。</li>
+          <li>中段补齐增益类与被动类技能，提升持续输出与容错。</li>
+          <li>核心爆发技能通常需要配合增益与减防技能使用。</li>
+          <li>加点没有唯一答案，需结合装备、练级方式与组队需求。</li>
+          <li>技能描述会随版本调整，实际以游戏内说明为准。</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 技能阶段 -->
+  <section class="section" id="stages">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">STAGE BY STAGE</span>
+        <h2>按转职阶段理解龙的传人技能</h2>
+        <p>龙的传人的技能是随转职逐层解锁的，每个阶段解决的问题不同：一转建立基础攻击与位移，二转开始形成刷图节奏，三转强化范围与爆发，四转及之后则围绕核心输出技能做整合。按阶段看，比一次性罗列技能名更容易理解。</p>
+      </div>
+
+      <div class="stage-grid">
+        <article class="stage-card">
+          <span class="lv">一转 · 基础期</span>
+          <h3>建立攻击与移动的基本盘</h3>
+          <p>这一阶段的技能决定你刷怪是否顺手。重点在于把主要攻击手段和位移手段立起来，其余辅助技能按剩余点数补。</p>
+          <ul>
+            <li>主攻技能：日常清怪的主要手段，优先提升。</li>
+            <li>位移技能：影响跑图效率，建议尽早解锁。</li>
+            <li>被动增益：提升基础属性，点数富余时补满。</li>
+            <li>过渡技能：够用即可，不必过度投入。</li>
+          </ul>
+        </article>
+
+        <article class="stage-card">
+          <span class="lv">二转 · 成型期</span>
+          <h3>刷图节奏开始清晰</h3>
+          <p>二转后攻击范围与连击手感明显改善，开始出现可以长期使用的技能。此时要考虑技能之间的衔接，而不是单独看某一个技能的伤害数字。</p>
+          <ul>
+            <li>范围攻击：决定刷图速度，优先投入。</li>
+            <li>连击衔接：关注前后摇，选择顺手的组合。</li>
+            <li>增益技能：提升输出稳定性，中期补满。</li>
+            <li>被动强化：提升主攻技能效果，逐步跟进。</li>
+          </ul>
+        </article>
+
+        <article class="stage-card dragon">
+          <span class="lv">三转 · 强化期</span>
+          <h3>爆发与范围能力提升</h3>
+          <p>三转是输出手段明显增多的一环，会出现更强的范围技能与增益类技能。加点上需要开始区分“刷图向”和“打Boss向”的取舍。</p>
+          <ul>
+            <li>强化主攻：提升核心技能等级，收益直接。</li>
+            <li>范围清怪：适合日常刷图，按地图需求点。</li>
+            <li>减益/控制：组队与打Boss时价值更高。</li>
+            <li>生存类被动：提升容错，视操作习惯取舍。</li>
+          </ul>
+        </article>
+
+        <article class="stage-card dragon">
+          <span class="lv">四转及以后 · 整合期</span>
+          <h3>围绕核心技能做整体搭配</h3>
+          <p>进入四转后，技能数量增多，重点从“点哪个”转向“怎么配”。核心输出技能、增益技能、减防技能之间的配合，往往比单纯堆技能等级更重要。</p>
+          <ul>
+            <li>核心输出：优先拉满，是伤害的主要来源。</li>
+            <li>增益技能：决定爆发窗口的伤害上限。</li>
+            <li>减防/增伤：团队环境下收益明显。</li>
+            <li>机动与保命：影响实战存活与输出环境。</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 加点方案 -->
+  <section class="section alt" id="build">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">SKILL BUILD</span>
+        <h2>加点优先级参考</h2>
+        <p>下面的表格按“先点满什么、再补什么”的顺序整理，适合刚接触这一职业的玩家作为起步参考。实际加点请结合自己的装备水平、常打的地图和是否固定组队来调整，不必完全照搬。</p>
+      </div>
+
+      <div class="table-scroll">
+        <table class="build-table">
+          <caption>说明：不同版本的技能名称与数值可能调整，具体以游戏内技能说明为准。</caption>
+          <thead>
+            <tr>
+              <th>优先级</th>
+              <th>技能类型</th>
+              <th>加点思路</th>
+              <th>适用场景</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>第一优先</b></td>
+              <td>核心主攻技能</td>
+              <td>直接决定伤害下限，资源优先投入，尽早拉满。</td>
+              <td>刷图、打Boss通用</td>
+            </tr>
+            <tr>
+              <td><b>第一优先</b></td>
+              <td>位移与机动技能</td>
+              <td>影响跑图效率与实战走位，通常只需少量点数即可发挥作用。</td>
+              <td>日常刷图、躲避机制</td>
+            </tr>
+            <tr>
+              <td><b>第二优先</b></td>
+              <td>范围清怪技能</td>
+              <td>提升单位时间清怪量，按常刷地图的怪物分布决定投入程度。</td>
+              <td>练级、日常任务</td>
+            </tr>
+            <tr>
+              <td><b>第二优先</b></td>
+              <td>增益类技能</td>
+              <td>提升输出稳定性与爆发上限，中期开始逐步补满。</td>
+              <td>打Boss、组队</td>
+            </tr>
+            <tr>
+              <td><b>第三优先</b></td>
+              <td>减防/控制类技能</td>
+              <td>单人收益有限，团队环境下价值更高，可按队伍需求点。</td>
+              <td>组队、Boss战</td>
+            </tr>
+            <tr>
+              <td><b>第三优先</b></td>
+              <td>被动强化类</td>
+              <td>提升属性与技能效果，点数富余时逐项补满。</td>
+              <td>长期养成</td>
+            </tr>
+            <tr>
+              <td><b>按需取舍</b></td>
+              <td>过渡技能</td>
+              <td>满足解锁条件即可，不建议投入过多点数。</td>
+              <td>前期过渡</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 输出循环 -->
+  <section class="section" id="rotate">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">COMBAT FLOW</span>
+        <h2>把技能串成一套顺手的循环</h2>
+        <p>技能点对了不代表打得顺。龙的传人的输出手感依赖技能之间的衔接，下面按刷图和打Boss两种场景分别说明大致的循环思路。</p>
+      </div>
+
+      <div class="rotate-grid">
+        <div class="rotate-box">
+          <h3><span>1</span>日常刷图循环</h3>
+          <ol>
+            <li><b>起手增益：</b>进图前先开启持续时间较长的增益技能。</li>
+            <li><b>范围清怪：</b>用范围技能处理密集怪物，减少来回跑动。</li>
+            <li><b>补刀收尾：</b>对残血目标用主攻技能快速清理。</li>
+            <li><b>位移衔接：</b>利用位移技能在平台间移动，保持节奏不断。</li>
+          </ol>
+          <div class="note">刷图时不必追求极限连招，稳定、省心、少停顿才是效率的关键。</div>
+        </div>
+
+        <div class="rotate-box">
+          <h3><span>2</span>Boss战输出循环</h3>
+          <ol>
+            <li><b>前置准备：</b>确认增益技能与减防技能处于可用状态。</li>
+            <li><b>开启爆发：</b>在安全的输出窗口内集中释放高伤害技能。</li>
+            <li><b>持续输出：</b>爆发结束后用主攻技能维持伤害，等待下一轮。</li>
+            <li><b>走位规避：</b>利用位移技能躲开机制，避免打断输出节奏。</li>
+          </ol>
+          <div class="note">爆发窗口的把握比技能等级更重要，时机不对会大幅浪费伤害。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 培养建议 -->
+  <section class="section alt" id="tips">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">GUIDE</span>
+        <h2>培养这一职业时的几个实用建议</h2>
+        <p>除了加点，装备方向、练级路线和操作习惯同样影响体验。以下内容偏向通用思路，不针对具体版本数值。</p>
+      </div>
+
+      <div class="tips-band">
+        <div>
+          <h3>先熟悉手感</h3>
+          <p>前期不用急着追求最优解，先把技能的前后摇和位移距离摸清楚，后续加点会更有判断依据。</p>
+        </div>
+        <div>
+          <h3>分清两个场景</h3>
+          <p>刷图和打Boss对技能的需求不同，建议准备两套思路，而不是用一套加点应付所有情况。</p>
+        </div>
+        <div>
+          <h3>关注技能联动</h3>
+          <p>增益、减防与核心输出之间的配合，往往比单个技能多升几级带来的提升更明显。</p>
+        </div>
+        <div>
+          <h3>留出调整空间</h3>
+          <p>如果游戏提供技能重置途径，可以大胆尝试不同加点，再根据实际体验做取舍。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">FAQ</span>
+        <h2>关于龙的传人技能的常见问题</h2>
+        <p>整理了几个新手最常问的问题，回答尽量保持通用，避免与具体版本数值绑定。</p>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>龙的传人技能加点有唯一正确答案吗？</summary>
+          <div class="answer">
+            没有。加点取决于你的装备水平、常打的内容以及操作习惯。刷图为主的玩家可以更偏向范围技能，长期打Boss的玩家则更看重核心输出与增益技能的配合。把上面的优先级当作起点，再根据自己的实际体验微调即可。
+          </div>
+        </details>
+
+        <details>
+          <summary>前期点数不够，应该先点哪一类技能？</summary>
+          <div class="answer">
+            一般建议先保证主攻技能和位移技能可用，这两类直接决定你能不能顺畅地打怪和跑图。增益类与被动类可以等点数富余后再逐步补上，过渡技能满足解锁条件即可。
+          </div>
+        </details>
+
+        <details>
+          <summary>为什么同样的技能，别人打出来的伤害更高？</summary>
+          <div class="answer">
+            伤害差异通常来自几个方面：增益技能是否全程覆盖、减防技能是否用在了正确的时机、爆发窗口是否对准了Boss的可输出阶段，以及装备与属性搭配是否合理。技能等级只是其中一环。
+          </div>
+        </details>
+
+        <details>
+          <summary>技能名称和效果会变吗？</summary>
+          <div class="answer">
+            游戏在版本更新中可能调整技能名称、数值或机制，因此本页更侧重技能定位与加点思路，而不是绑定某一版本的具体数字。实际效果请以游戏内技能说明为准。
+          </div>
+        </details>
+
+        <details>
+          <summary>这一职业适合新手吗？</summary>
+          <div class="answer">
+            它的操作节奏偏快，需要一定时间熟悉连招与走位。如果你喜欢机动性强、打击感明确的近战职业，可以尝试；如果更偏好站桩输出或远程玩法，可能需要先体验一下再决定。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关阅读 -->
+  <section class="section alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">MORE</span>
+        <h2>延伸阅读方向</h2>
+        <p>如果你想进一步了解这一职业，可以从以下几个方向继续深入。</p>
+      </div>
+
+      <div class="related-grid">
+        <article class="related-card">
+          <span>职业定位</span>
+          <h3>龙的传人适合什么玩法</h3>
+          <p>从武器类型、攻击距离和机动性出发，理解这一职业在队伍中的位置。</p>
+        </article>
+        <article class="related-card">
+          <span>装备思路</span>
+          <h3>属性与装备的搭配方向</h3>
+          <p>了解主属性、副属性与潜能选择的基本逻辑，避免资源浪费。</p>
+        </article>
+        <article class="related-card">
+          <span>练级路线</span>
+          <h3>不同阶段的练级地图选择</h3>
+          <p>结合技能范围与怪物分布，挑选更适合自己的练级区域。</p>
+        </article>
+        <article class="related-card">
+          <span>操作提升</span>
+          <h3>走位与技能衔接技巧</h3>
+          <p>通过练习位移与输出节奏，减少无效动作，提高实战效率。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <b>龙的传人技能站</b>
+        <p>专注整理冒险岛职业相关资料，围绕技能体系、加点思路与实战应用提供参考内容。页面信息以通用思路为主，具体数值请以游戏内说明为准。</p>
+      </div>
+      <div>
+        <h4>技能资料</h4>
+        <ul>
+          <li><a href="#stages">各阶段技能</a></li>
+          <li><a href="#build">加点优先级</a></li>
+          <li><a href="#rotate">输出循环</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>培养相关</h4>
+        <ul>
+          <li><a href="#tips">培养建议</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#stages">转职路线</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>使用说明</h4>
+        <ul>
+          <li>内容仅供参考</li>
+          <li>以游戏内为准</li>
+          <li>欢迎反馈纠错</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 龙的传人技能站 · 冒险岛职业资料整理</span>
+      <span>本站为非官方资料页面，与游戏运营方无隶属关系</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('.site-nav a[href^="#"]');
+  links.forEach(function(link){
+    link.addEventListener('click', function(e){
+      var id = this.getAttribute('href').slice(1);
+      var target = document.getElementById(id);
+      if(target){
+        e.preventDefault();
+        var top = target.getBoundingClientRect().top + window.pageYOffset - 20;
+        window.scrollTo({top: top, behavior: 'smooth'});
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
